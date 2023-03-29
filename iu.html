@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>This is for Ánh Dương</title>
+    
+<!--External CSS-->
+<link rel="stylesheet" href="iu.css" type="text/css">
+
+<style>
+    #heart-container {
+        position: relative;
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    #heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #heart:hover {
+        opacity: 0.8;
+    }
+
+    #new-image {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px
+    }
+
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    #text-container {
+        position: absolute;
+        top: 60px;
+        left: 90px;
+        font-size: 60px;
+        font-weight: bold;
+        color: red;
+        display: none;
+    }
+
+</style>
+    
+</head>
+<body>
+<div id="heart-container">
+    <img id="heart" src="images/istockphoto-842899542-612x612.jpg" alt="Heart" onclick="replaceHeart()">
+    <img id="new-image" src="images/333435399_717039173460511_684698543586763751_n.jpg" alt="New Image">
+    <div id="text-container">Anh yêu em</div>
+</div>
+<script>
+    function replaceHeart() {
+        var heart = document.getElementById("heart");
+        var newImage = document.getElementById("new-image");
+        var textContainer = document.getElementById("text-container");
+        
+        heart.style.display = "none";
+    newImage.style.display = "block";
+    textContainer.style.display = "block";
+}
+</script>
+
+</body>
+</html>
